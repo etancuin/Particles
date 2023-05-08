@@ -10,24 +10,16 @@ using namespace std;
 
 class Engine
 {
-private:
-	// A regular RenderWindow
-	RenderWindow m_Window;
+	private:
+		RenderWindow m_Window;
+		vector<Particle> m_particles;
+		void input();
+		void update(float dtAsSeconds);
+		void draw();
 
-	//vector for Particles
-	vector<Particle> m_particles;
-
-	// Private functions for internal use only
-	void input();
-	void update(float dtAsSeconds);
-	void draw();
-
-public:
-	// The Engine constructor
-	Engine();
-
-	// Run will call all the private functions
-	void run();
+	public:
+		Engine();
+		void run();
 };
 
 #endif

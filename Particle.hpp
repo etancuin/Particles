@@ -1,13 +1,12 @@
 #ifndef PARTICLE_HPP
 #define PARTICLE_HPP
-#endif
 
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 #include "Matrices.hpp"
 
 const float PI = 3.1415926535897932384626433;
-const float G = 4;      //Gravity
+const float G = 3000;      //Gravity
 const float TTL = 5.0;  //Time To Live
 const float SCALE = 0.999;
 
@@ -39,9 +38,10 @@ class Particle : public Drawable
       Matrix m_A;
       ///construct a RotationMatrix R, left mulitply it by m_A
       void rotate(double theta);
-
       ///construct a ScalingMatrix S, left multiply it by m_A
       void scale(double c);
       ///construct a TranslationMatrix T, add it to m_A
       void translate(double xShift, double yShift);
 };
+
+#endif
